@@ -1,0 +1,70 @@
+#! /bin/sh
+
+sxhkd &
+
+$HOME/.config/polybar/launch.sh 
+
+xsetroot -cursor_name arrow& 
+
+nitrogen --restore & 
+
+wmname LG3D &
+
+xinput --set-prop 8 'libinput Accel Speed' -0.9 &
+xinput --list-props 8 &
+
+picom --experimental-backends -b -f & 
+
+# Bar
+
+#if xrandr -q | grep 'HDMI-1 connected'; then
+#
+#	xrandr --output HDMI-1 --mode 192x1080 --left-of eDP-1
+#
+#	bspc monitor HDMI-1 -d I II III IV V
+#	bspc monitor eDP-1 -d VI VII VIII IX X
+#
+#else 
+#	bspc monitor -d I II III IV V VI VII VIII IX X
+#fi
+
+# bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor DisplayPort-0 -d I II III IV V
+bspc monitor HDMI-A-0 -d VI VII VIII IX X
+
+##Color settings
+# bspc config focused_border_color "#1ABB9B"
+bspc config focused_border_color "#002548"
+bspc config normal_border_color "#2D2D2D"
+bspc config presel_feedback_color "#1ABB9B"
+
+bspc config focus_follows_pointer true
+
+# bspc config normal_border_color \#000000
+# bspc config active_border_color \#E84F4F
+
+bspc config border_width         2
+bspc config window_gap           4
+
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config ignore_ewmh_focus true
+
+
+bspc rule -a Gimp desktop='^3' state=floating follow=on
+bspc rule -a Pick-colour-picker state=floating sticky=on
+bspc rule -a spotify desktop='^2' state=floating follow=on
+bspc rule -a ICE-SSB-translate rectangle=1200x800+0+0 center=true state=floating desktop='^6'
+bspc rule -a ICE-SSB-notion rectangle=1200x800+0+0 center=true state=floating desktop='^4'
+bspc rule -a ICE-SSB-whatsapp rectangle=1200x800+0+0 center=true state=floating desktop='^4'
+bspc rule -a ICE-SSB-instagram rectangle=1200x800+0+0 center=true state=floating desktop='^4'
+bspc rule -a XClipboard rectangle=300x110+1610+30 state=floating 
+
+# bspc rule -a Alacritty state=floating rectangle=800x500+100+100 sticky=on
+# bspc rule -a Chromium desktop='^2'
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Screenkey manage=off

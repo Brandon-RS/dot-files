@@ -1,0 +1,67 @@
+window:
+
+  dimensions:
+    columns: 144
+    lines: 44
+
+  padding:
+    x: 2
+    y: 1
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+background_opacity: 1
+
+font:
+  normal:
+    family: "MesloLGS NF"
+    style: Regular
+  bold:
+    family: "MesloLGS NF"
+    style: Bold
+  italic:
+    family: "MesloLGS NF"
+    style: Italic
+  bold_italic:
+    family: "MesloLGS NF"
+    style: BoldItalic
+  size: 10
+
+cursor:
+  style: 
+    shape: Beam
+    blinking: Always
+
+colors:
+  primary:
+    background: "0x292C3E"
+    foreground: "0xEBEBEB"
+  cursor:
+    text: "0xFF261E"
+    cursor: "0xFF261E"
+
+  normal:
+    # black: "0x0d0d0d"
+    # black: "#3E3E5A"
+    black: "#31315C"
+    red: "0xFF301B"
+    green: "0xA0E521"
+    yellow: "0xFFC620"
+    blue: "0x1BA6FA"
+    magenta: "0x8763B8"
+    cyan: "0x21DEEF"
+    white: "0xEBEBEB"
+  bright:
+    black: "0x6D7070"
+    red: "0xFF4352"
+    green: "0xB8E466"
+    yellow: "0xFFD750"
+    blue: "0x1BA6FA"
+    magenta: "0xA578EA"
+    cyan: "0x73FBF1"
+    white: "0xFEFEF8"

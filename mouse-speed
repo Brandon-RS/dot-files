@@ -1,0 +1,5 @@
+xinput
+
+xinput --set-prop <device id> 'libinput Accel Speed' -0.9
+xinput --list-props <device id>
+

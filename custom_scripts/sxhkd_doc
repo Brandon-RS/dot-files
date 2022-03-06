@@ -1,0 +1,123 @@
+#!/bin/bash
+
+input="$HOME/.config/sxhkd/sxhkdrc"
+
+re_doc="^#-doc\s"
+re_desc="^#__\s"
+re_title="^#-title\s"
+
+font_color='\033[38;2;22;160;133m'
+Color_Off='\033[0m'
+title_color='\033[38;2;134;188;39m'
+
+tabulation="\t\t\t"
+
+readLines() {
+
+  if [[ $line =~ $re_doc ]]; then
+
+    init_line="${line#* }"
+    desc_line="${font_color}${init_line%%;*}${Color_Off}"
+    shortcut="${init_line##*;}"
+
+    printf "${desc_line}\t${shortcut}\n"
+
+  elif [[ $line =~ $re_desc ]]; then
+    printf "${tabulation}${line#*#__ }\n"
+
+  elif [[ $line =~ $re_title ]]; then
+    printf "${title_color}${line#*#-title}${Color_Off}\n"
+  fi
+
+}
+
+aux=0
+
+testT() {
+
+  while IFS= read -r line_2; do
+
+    if [[ $line_2 =~ $re_doc ]]; then
+
+      init_line="${line_2#* }"
+      desc_line="${font_color}${init_line%%;*}${Color_Off}"
+      shortcut="${init_line##*;}"
+
+      if [[ $aux == $1 ]]; then
+        printf "${desc_line}\t${shortcut}\n"
+      fi
+
+    elif [[ $line_2 =~ $re_desc ]]; then
+      if [[ $aux == $1 ]]; then
+        printf "${tabulation}${line_2#*#__ }\n"
+      fi
+
+    elif [[ $line_2 =~ $re_title ]]; then
+      aux=$(expr $aux + 1)
+    fi
+
+  done \
+    <"$input"
+
+}
+
+countPS=0
+
+printSection() {
+  if [[ $line =~ $re_title ]]; then
+
+    countPS=$(expr $countPS + 1)
+
+    if [[ $countPS == $1 ]]; then
+      printf "${title_color}${line#*#-title}${Color_Off}\n"
+      testT $countPS
+    fi
+
+  fi
+}
+
+while IFS= read -r line; do
+
+  if [[ $1 == '-gen' ]]; then
+
+    printSection 1
+
+  elif [[ $1 == '-bs' ]]; then
+
+    printSection 2
+  elif [[ $1 == '-state' ]]; then
+
+    printSection 3
+
+  elif [[ $1 == '-focus' ]]; then
+
+    printSection 4
+
+  elif [[ $1 == '-prese' ]]; then
+
+    printSection 5
+
+  elif [[ $1 == '-move' ]]; then
+
+    printSection 6
+
+  elif [[ $1 == '-h' ]]; then
+
+  h_tab="\t\t"
+
+    printf "${title_color} SXHKD helper.${Color_Off}\n"
+    printf "${h_tab} -gen \t: ${title_color}VM INDEPENDENT HOTKEYS${Color_Off}.\n"
+    printf "${h_tab} -bs \t: ${title_color}BSPWM HOTKEYS${Color_Off}.\n"
+    printf "${h_tab} -state : ${title_color}STATE/FLAGS${Color_Off}.\n"
+    printf "${h_tab} -focus : ${title_color}FOCUS/SWAP${Color_Off}.\n"
+    printf "${h_tab} -prese : ${title_color}PRESELECT${Color_Off}.\n"
+    printf "${h_tab} -move \t: ${title_color}MOVE/RESIZE${Color_Off}.\n"
+    printf "${h_tab} -h \t: ${title_color}HELP${Color_Off}.\n"
+
+    break
+
+  else
+    readLines
+  fi
+
+done <"$input"
