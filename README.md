@@ -11,6 +11,8 @@ Config files of some tools for linux.
 - [Sxhkd](https://github.com/baskerville/sxhkd).
 - [Zathura](https://github.com/pwmt/zathura).
 
+![Desktop_test](https://user-images.githubusercontent.com/79495707/156905282-c3616471-9595-4ab7-bd9b-60e62ad6006b.png)
+
 **Note:** These are just the configuration files, for them to take effect you have to install the tools.
 
 ## **Warnings:**
