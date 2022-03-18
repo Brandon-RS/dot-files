@@ -10,7 +10,7 @@ nitrogen --restore &
 
 wmname LG3D &
 
-xinput --set-prop 8 'libinput Accel Speed' -0.9 &
+xinput --set-prop 8 'libinput Accel Speed' -0.99 &
 xinput --list-props 8 &
 
 picom --experimental-backends -b -f & 
@@ -58,9 +58,9 @@ bspc rule -a Gimp desktop='^3' state=floating follow=on
 bspc rule -a Pick-colour-picker state=floating sticky=on
 bspc rule -a spotify desktop='^2' state=floating follow=on
 bspc rule -a ICE-SSB-translate rectangle=1200x800+0+0 center=true state=floating desktop='^6'
-bspc rule -a ICE-SSB-notion rectangle=1200x800+0+0 center=true state=floating desktop='^4'
-bspc rule -a ICE-SSB-whatsapp rectangle=1200x800+0+0 center=true state=floating desktop='^4'
-bspc rule -a ICE-SSB-instagram rectangle=1200x800+0+0 center=true state=floating desktop='^4'
+bspc rule -a ICE-SSB-notion rectangle=1200x800+0+0 center=true state=floating desktop='^7'
+bspc rule -a ICE-SSB-whatsapp rectangle=1200x800+0+0 center=true state=floating desktop='^7'
+bspc rule -a ICE-SSB-instagram rectangle=1200x800+0+0 center=true state=floating desktop='^7'
 bspc rule -a XClipboard rectangle=300x110+1610+30 state=floating 
 
 # bspc rule -a Alacritty state=floating rectangle=800x500+100+100 sticky=on

@@ -31,16 +31,16 @@ if type "xrandr"; then
   done
 
 else
-  # Left bar
-  polybar -q volume_bar -c "$DIR"/custom_bars.ini &
-  polybar -q net_bar -c "$DIR"/custom_bars.ini &
-  polybar -q date_bar -c "$DIR"/custom_bars.ini &
-  polybar -q sysmenu_bar -c "$DIR"/custom_bars.ini &
+  # # Left bar
+  # polybar -q volume_bar -c "$DIR"/custom_bars.ini &
+  # polybar -q net_bar -c "$DIR"/custom_bars.ini &
+  # polybar -q date_bar -c "$DIR"/custom_bars.ini &
+  # polybar -q sysmenu_bar -c "$DIR"/custom_bars.ini &
 
-  # Center bar
-  polybar -q workspaces_bar -c "$DIR"/custom_bars.ini &
+  # # Center bar
+  # polybar -q workspaces_bar -c "$DIR"/custom_bars.ini &
 
-  # Rigth bar
-  polybar -q log_bar -c "$DIR"/custom_bars.ini &
-  polybar -q desc_bar -c "$DIR"/custom_bars.ini &
+  # # Rigth bar
+  # polybar -q log_bar -c "$DIR"/custom_bars.ini &
+  # polybar -q desc_bar -c "$DIR"/custom_bars.ini &
 fi
