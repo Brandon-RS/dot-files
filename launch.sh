@@ -9,6 +9,7 @@ FONTS_DIR="$HOME/.local/share/fonts"
 NEOFETCH_DIR="$HOME/.config/neofetch"
 PICOM_DIR="$HOME/.config/picom"
 POLYBAR_DIR="$HOME/.config/polybar"
+REDSHIFT_DIR="$HOME/.config/redshift"
 ROFI_DIR="$HOME/.config/rofi"
 SXHKD_DIR="$HOME/.config/sxhkd"
 ZATHURA_DIR="$HOME/.config/zathura"
@@ -40,10 +41,10 @@ install_dotfile() {
 main() {
   clear
 
-  OPTIONS_VALUES=("ALACRITTY" "BSPWM" "DUNST" "NEOFETCH" "PICOM" "POLYBAR" "ROFI" "SXHKD" "ZATHURA")
+  OPTIONS_VALUES=("ALACRITTY" "BSPWM" "DUNST" "NEOFETCH" "PICOM" "POLYBAR" "REDSHIFT" "ROFI" "SXHKD" "ZATHURA")
 
-  VARS=($ALACRITTY_DIR $BSPWM_DIR $DUNST_DIR $NEOFETCH_DIR $PICOM_DIR $POLYBAR_DIR $ROFI_DIR $SXHKD_DIR $ZATHURA_DIR)
-  dirs=(alacritty bspwm dunst neofetch picom polybar rofi sxhkd zathura)
+  VARS=($ALACRITTY_DIR $BSPWM_DIR $DUNST_DIR $NEOFETCH_DIR $PICOM_DIR $POLYBAR_DIR $REDSHIFT_DIR $ROFI_DIR $SXHKD_DIR $ZATHURA_DIR)
+  dirs=(alacritty bspwm dunst neofetch picom polybar redshift rofi sxhkd zathura)
 
   if [[ $1 == '--all' ]]; then
     echo -e 'Installing all files\n'
