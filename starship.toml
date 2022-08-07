@@ -1,5 +1,6 @@
 scan_timeout = 60
 add_newline = false
+command_timeout = 600
 
 [line_break]
 disabled = true
@@ -14,6 +15,8 @@ show_always = true
 [directory]
 truncation_symbol = " …/"
 home_symbol = ""
+read_only = " "
+read_only_style = "#c60a93"
 
 [cmd_duration]
 format = "[$duration]($style) "
