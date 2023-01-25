@@ -9,12 +9,12 @@
 
 configuration {
 	font:							"Iosevka Nerd Font 10";
-    show-icons:                     true;
+  show-icons:                     true;
 	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-    fullscreen:                     false;
+  display-drun: 					"";
+  drun-display-format:            "{name}";
+  disable-history:                false;
+  fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
@@ -22,16 +22,16 @@ configuration {
 @import "colors.rasi"
 
 window {
-    transparency:                   "real";
-    background-color:               @bg;
-    text-color:                     @fg;
+  transparency:                   "real";
+  background-color:               @bg;
+  text-color:                     @fg;
 	border:							0px;
 	border-color:					@ac;
-    border-radius:                  10px;
+  border-radius:                  10px;
 	width:							400px;
-    location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
+  location:                       center;
+  x-offset:                       0;
+  y-offset:                       0;
 }
 
 prompt {
