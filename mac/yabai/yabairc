@@ -1,0 +1,37 @@
+# Layout types - bsp, stack, float
+yabai -m config layout bsp
+
+yabai -m config windows_placement second_child
+
+# Padding
+yabai -m config top_padding 6
+yabai -m config bottom_padding 6
+yabai -m config left_padding 6
+yabai -m config right_padding 6
+yabai -m config window_gap 7
+
+# Mouse
+yabai -m config mouse_follows_focus on
+
+yabai -m config mouse_modifier alt
+# Left click + drag
+yabai -m config mouse_action1 move
+# Right click + drag
+yabai -m config mouse_action2 resize
+
+yabai -m config mouse_drop_action swap
+
+# Disable specific apps
+# yabai -m rule --add app="^com\\.apple\\.Dock$" manage=off
+# yabai -m rule --add app="^Karabiner-Elements$" manage=off
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Obsidian$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Postman$" manage=off
+yabai -m rule --add app="^MongoDB Compass$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^qemu-system-aarch64"

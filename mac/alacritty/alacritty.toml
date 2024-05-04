@@ -1,0 +1,29 @@
+import = [
+    "~/.config/alacritty/themes/themes/one_dark.toml"
+]
+
+[cursor]
+blink_interval = 600
+style.blinking = "On"
+style.shape = "Beam"
+
+[font]
+size = 12.5
+normal.family = "FiraCode Nerd Font"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "Buttonless"
+dynamic_title = false
+padding.x = 5
+padding.y = 5
+dimensions.columns = 114
+dimensions.lines = 38
+class.general = "Alacritty"
+class.instance = "Alacritty"
