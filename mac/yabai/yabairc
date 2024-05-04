@@ -22,16 +22,12 @@ yabai -m config mouse_action2 resize
 yabai -m config mouse_drop_action swap
 
 # Disable specific apps
-# yabai -m rule --add app="^com\\.apple\\.Dock$" manage=off
-# yabai -m rule --add app="^Karabiner-Elements$" manage=off
-
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Obsidian$" manage=off
-yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Postman$" manage=off
 yabai -m rule --add app="^MongoDB Compass$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
-yabai -m rule --add app="^qemu-system-aarch64"
+yabai -m rule --add app="^qemu-system-arch64"
