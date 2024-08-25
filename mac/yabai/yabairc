@@ -11,7 +11,7 @@ yabai -m config right_padding 6
 yabai -m config window_gap 7
 
 # Mouse
-yabai -m config mouse_follows_focus on
+# yabai -m config mouse_follows_focus on
 
 yabai -m config mouse_modifier alt
 # Left click + drag
@@ -26,8 +26,15 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Obsidian$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Postman$" manage=off
 yabai -m rule --add app="^MongoDB Compass$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
-yabai -m rule --add app="^qemu-system-arch64"
+yabai -m rule --add app="^Spotify$" display=3 grid=7:8:3:2:5:5 manage=off
+yabai -m rule --add app="^qemu-system-aarch64" manage=off
+yabai -m rule --add app="^Notion" display=3 grid=9:8:2:0:6:7 manage=off
+yabai -m rule --add app="^Hyper" grid=12:10:2:2:6:8 manage=off
+yabai -m rule --add app="^WhatsApp" manage=off
+yabai -m rule --add app="^Telegram" manage=off
+yabai -m rule --add app="^Brave Browser" display=1 grid=8:5:1:1:4:7 manage=off
+yabai -m rule --add app="^Microsoft Edge" display=1 grid=8:5:1:1:4:7 manage=off
