@@ -1,3 +1,5 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 scan_timeout = 60
 add_newline = false
 command_timeout = 600
@@ -8,13 +10,12 @@ disabled = true
 [username]
 style_user = "fg:250 bold"
 style_root = "red bold"
-format = "[ $user]($style) "
-# disabled = true
+format = "󰢚 [$user]($style) "
 show_always = true
 
 [directory]
-truncation_symbol = " …/"
-home_symbol = ""
+truncation_symbol = "󰟌 "
+home_symbol = "."
 read_only = " "
 read_only_style = "#c60a93"
 
@@ -67,3 +68,11 @@ symbol = " "
 format = "[$symbol($version )]($style)"
 style = "bold cyan"
 symbol = " "
+
+[shell]
+fish_indicator = '󰈺'
+zsh_indicator = ""
+powershell_indicator = '_'
+unknown_indicator = '󰏚'
+style = 'bold yellow'
+disabled = false
