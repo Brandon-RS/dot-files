@@ -6,10 +6,10 @@ command_timeout = 600
 disabled = true
 
 [username]
-style_user = "white bold"
+style_user = "fg:250 bold"
 style_root = "red bold"
-format = "[ﮊ $user]($style) "
-disabled = true
+format = "[ $user]($style) "
+# disabled = true
 show_always = true
 
 [directory]
